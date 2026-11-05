@@ -1,13 +1,14 @@
 {
-  "version": 4,
+  "version": 5,
   "guncelleme": "2026-11-06",
   "abonelikAcik": false,
   "odul": {
     "acik": true,
     "tur": "fatura",
     "saat": 24,
-    "fatura": 3,
-    "gunlukLimit": 3
+    "fatura": 2,
+    "gunlukLimit": 3,
+    "gunSonuSil": true
   },
   "gecisReklami": {
     "acik": true,
