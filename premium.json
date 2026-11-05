@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "guncelleme": "2026-11-06",
   "abonelikAcik": false,
   "odul": {
@@ -44,5 +44,9 @@
     "alt": "Fatura kesmek her zaman ücretsiz. Premium ekstraları açar."
   },
   "kodTuz": "efk-2026",
-  "kodlar": []
+  "kodlar": [],
+  "yeniFaturaOneri": {
+    "tur": "kart",
+    "pencereGunde": 1
+  }
 }
