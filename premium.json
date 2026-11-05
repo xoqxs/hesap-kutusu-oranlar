@@ -1,18 +1,47 @@
 {
-  "version": 1,
-  "guncelleme": "2026-11-05",
-  "odul": { "acik": true, "saat": 24, "gunlukLimit": 3 },
-  "gecisReklami": { "acik": true, "herNFatura": 1 },
-  "kampanya": { "herkesPremiumBitis": "", "mesaj": "" },
-  "premiumOzellikler": ["reklamsiz", "logo", "rapor"],
-  "pazaryeriOzellikler": ["pazaryeri"],
+  "version": 2,
+  "guncelleme": "2026-11-06",
+  "odul": {
+    "acik": true,
+    "tur": "fatura",
+    "saat": 24,
+    "fatura": 3,
+    "gunlukLimit": 3
+  },
+  "gecisReklami": {
+    "acik": true,
+    "herNFatura": 1
+  },
+  "kampanya": {
+    "herkesPremiumBitis": "",
+    "mesaj": ""
+  },
+  "premiumOzellikler": [
+    "reklamsiz",
+    "logo",
+    "rapor"
+  ],
+  "pazaryeriOzellikler": [
+    "pazaryeri"
+  ],
   "planlar": {
     "premium": [
-      { "plan": "yillik", "etiket": "Yıllık", "not": "En avantajlı" },
-      { "plan": "aylik", "etiket": "Aylık", "not": "" }
+      {
+        "plan": "yillik",
+        "etiket": "Yıllık",
+        "not": "En avantajlı"
+      },
+      {
+        "plan": "aylik",
+        "etiket": "Aylık",
+        "not": ""
+      }
     ]
   },
-  "metinler": { "baslik": "Premium", "alt": "Fatura kesmek her zaman ücretsiz. Premium ekstraları açar." },
+  "metinler": {
+    "baslik": "Premium",
+    "alt": "Fatura kesmek her zaman ücretsiz. Premium ekstraları açar."
+  },
   "kodTuz": "efk-2026",
   "kodlar": []
 }
