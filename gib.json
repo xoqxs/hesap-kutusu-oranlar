@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "guncelleme": "2026-11-05",
+  "durum": {
+    "kod": "ok",
+    "mesaj": "",
+    "portalAc": false
+  },
+  "minUygulamaSurumu": 11,
+  "ortam": {
+    "prod": {
+      "taban": "https://earsivportal.efatura.gov.tr",
+      "loginCmd": "anologin",
+      "logoutCmd": "anologin"
+    },
+    "test": {
+      "taban": "https://earsivportaltest.efatura.gov.tr",
+      "loginCmd": "login",
+      "logoutCmd": "logout"
+    }
+  },
+  "yollar": {
+    "giris": "/earsiv-services/assos-login",
+    "dispatch": "/earsiv-services/dispatch",
+    "indir": "/earsiv-services/download"
+  },
+  "basliklar": {
+    "accept": "*/*",
+    "accept-language": "tr,en-US;q=0.9,en;q=0.8",
+    "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+    "cache-control": "no-cache",
+    "pragma": "no-cache"
+  },
+  "girisGovde": "assoscmd={loginCmd}&rtype=json&userid={kullanici}&sifre={sifre}&sifre2={sifre}&parola=1&",
+  "cikisGovde": "assoscmd={logoutCmd}&rtype=json&token={token}&",
+  "dispatchGovde": "cmd={cmd}&callid={uuid}&pageName={sayfa}&token={token}&jp={jp}",
+  "indirSorgu": "?token={token}&ettn={ettn}&belgeTip=FATURA&onayDurumu={onayDurumu}&cmd=downloadResource&",
+  "komutlar": {
+    "taslakOlustur": {
+      "cmd": "EARSIV_PORTAL_FATURA_OLUSTUR",
+      "sayfa": "RG_BASITFATURA",
+      "basariRegex": "başarıyla oluşturulmuştur"
+    },
+    "taslaklariGetir": {
+      "cmd": "EARSIV_PORTAL_TASLAKLARI_GETIR",
+      "sayfa": "RG_BASITTASLAKLAR"
+    },
+    "adimaKesilenler": {
+      "cmd": "EARSIV_PORTAL_ADIMA_KESILEN_BELGELERI_GETIR",
+      "sayfa": "RG_ALICI_TASLAKLAR"
+    },
+    "faturaGoster": {
+      "cmd": "EARSIV_PORTAL_FATURA_GOSTER",
+      "sayfa": "RG_BASITTASLAKLAR"
+    },
+    "faturaGetir": {
+      "cmd": "EARSIV_PORTAL_FATURA_GETIR",
+      "sayfa": "RG_BASITTASLAKLAR"
+    },
+    "taslakSil": {
+      "cmd": "EARSIV_PORTAL_FATURA_SIL",
+      "sayfa": "RG_BASITTASLAKLAR"
+    },
+    "aliciBilgisi": {
+      "cmd": "SICIL_VEYA_MERNISTEN_BILGILERI_GETIR",
+      "sayfa": "RG_BASITFATURA"
+    },
+    "telefonSorgula": {
+      "cmd": "EARSIV_PORTAL_TELEFONNO_SORGULA",
+      "sayfa": "RG_SMSONAY"
+    },
+    "smsGonder": {
+      "cmd": "EARSIV_PORTAL_SMSSIFRE_GONDER",
+      "sayfa": "RG_SMSONAY"
+    },
+    "smsDogrulaImzala": {
+      "cmd": "0lhozfib5410mp",
+      "sayfa": "RG_SMSONAY",
+      "not": "OPR:1 ve DATA zorunlu; data.sonuc==='1' imzalandı"
+    },
+    "kullaniciGetir": {
+      "cmd": "EARSIV_PORTAL_KULLANICI_BILGILERI_GETIR",
+      "sayfa": "RG_KULLANICI"
+    },
+    "kullaniciKaydet": {
+      "cmd": "EARSIV_PORTAL_KULLANICI_BILGILERI_KAYDET",
+      "sayfa": "RG_KULLANICI"
+    },
+    "iptalTalebi": {
+      "cmd": "EARSIV_PORTAL_IPTAL_TALEBI_OLUSTUR",
+      "sayfa": "RG_TASLAKLAR",
+      "jp": {
+        "ettn": "{ettn}",
+        "onayDurumu": "Onaylandı",
+        "belgeTuru": "FATURA",
+        "talepAciklama": "{aciklama}"
+      }
+    },
+    "itirazTalebi": {
+      "cmd": "EARSIV_PORTAL_ITIRAZ_TALEBI_OLUSTUR",
+      "sayfa": "RG_TASLAKLAR"
+    },
+    "gelenTalepler": {
+      "cmd": "EARSIV_PORTAL_GELEN_IPTAL_ITIRAZ_TALEPLERINI_GETIR",
+      "sayfa": "RG_IPTALITIRAZTASLAKLAR"
+    },
+    "belgeIndir": {
+      "cmd": "EARSIV_PORTAL_BELGE_INDIR",
+      "sayfa": "RG_TASLAKLAR"
+    },
+    "testKullaniciOner": {
+      "yol": "/earsiv-services/esign",
+      "govde": "assoscmd=kullaniciOner&rtype=json",
+      "not": "Yalnızca test ortamı; cevap {userid}, şifre 1"
+    },
+    "efaturaMukellefMi": {
+      "cmd": "",
+      "sayfa": "",
+      "not": "Portalda tespit edilecek; alternatif: ebelge.gib.gov.tr mükellef sorgusu"
+    }
+  },
+  "sabitler": {
+    "hangiTip": "5000/30000",
+    "paraBirimi": "TRY",
+    "birim": "C62",
+    "varsayilanTckn": "11111111111",
+    "faturaUuid": "",
+    "tarihBicimi": "dd/MM/yyyy",
+    "saatBicimi": "HH:mm:ss",
+    "faturaTipleri": [
+      "SATIS",
+      "IADE"
+    ]
+  },
+  "hataEslestirme": [
+    {
+      "regex": "birden fazla giriş|Güvenli Çıkış",
+      "mesaj": "GİB oturumunuz başka bir yerde açık. 20 saniye bekleyip tekrar deneyin."
+    },
+    {
+      "regex": "Kullanıcı kodu veya şifre|hatalı",
+      "mesaj": "Kullanıcı kodu veya şifre hatalı. İnteraktif Vergi Dairesi bilgilerinizi kontrol edin."
+    },
+    {
+      "regex": "Service Not Found",
+      "mesaj": "GİB portalında değişiklik var; düzeltme hazırlanıyor. Şimdilik GİB portalını kullanabilirsiniz."
+    },
+    {
+      "regex": "token|oturum",
+      "mesaj": "Oturum süresi doldu, yeniden giriş yapılıyor."
+    }
+  ]
+}
