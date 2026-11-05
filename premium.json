@@ -1,6 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "guncelleme": "2026-11-06",
+  "abonelikAcik": false,
   "odul": {
     "acik": true,
     "tur": "fatura",
