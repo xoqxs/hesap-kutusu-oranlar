@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "guncelleme": "2026-11-05",
+  "version": 2,
+  "guncelleme": "2026-11-06",
   "durum": {
     "kod": "ok",
     "mesaj": "",
@@ -47,6 +47,10 @@
     },
     "adimaKesilenler": {
       "cmd": "EARSIV_PORTAL_ADIMA_KESILEN_BELGELERI_GETIR",
+      "sayfa": "RG_ALICI_TASLAKLAR"
+    },
+    "adimaKesilenGoster": {
+      "cmd": "EARSIV_PORTAL_FATURA_GOSTER",
       "sayfa": "RG_ALICI_TASLAKLAR"
     },
     "faturaGoster": {
